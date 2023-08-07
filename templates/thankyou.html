@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>BankaiXHunter</title>
+    <link rel="shortcut icon" href="/static/assests/logo.png" type="image/x-icon">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/static/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="/static/css/noscript.css" />
+    </noscript>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper-->
+    <div id="wrapper">
+
+        <div id="bg"></div>
+        <div id="overlay"></div>
+
+        <!-- Header -->
+        <div id="header">
+            <p><a href="/" id="thankyou">Forest Clove</a></p>
+            <h1><a href="/" id="thankyou">Prediction</a></h1>
+
+        </div>
+        <!-- Nav -->
+        <nav id="nav">
+            <a href="#" class="icon solid fa-tree"><span>Home</span></a>
+        </nav>
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Me -->
+            <article id="home" class="panel thankyou">
+
+                <img class="thankyou-tree" src="/static/assests/img/tree.png">
+                <header>
+                    {% if multiple_value %}
+                    <p>
+                        <br>
+                        Prediction:
+                        <h4>{{ result }}</h4>
+                        <br>
+                        Forests are full of surprises! 🌳 Consult with experts for the ultimate forest-savvy decisions.
+                        Thanks for using our Forest Grove Predictor! 🌲🌳🍃
+                    {% else %}
+
+
+                    <h4>Thank You!!!</h4>
+                    <br>
+                    <button class="download-result"><a href="{{result}}" download="">Download Result
+                            File</a>
+                    </button>
+                    <br>
+                    <p>Forests are full of surprises! 🌳 Consult with experts for the ultimate forest-savvy decisions.
+                        Thanks for using our Forest Grove Predictor! 🌲🌳🍃
+    </p>
+
+
+                    {% endif %}
+
+                </header>
+            </article>
+
+
+        </div>
+
+        <!-- Footer -->
+        <div id="footer">
+            <ul class="copyright">
+                <li>&copy; Avnish Mishra.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="/static/js/breakpoints.min.js"></script>
+    <script src="/static/js/browser.min.js"></script>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/util.js"></script>
+    <script src="/static/js/main.js"></script>
+
+</body>
+
+</html>

@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: https://americanexpress.azurecr.io/
-        username: ${{ secrets.AzureAppService_ContainerUsername_a29ff3a03032417e8680462770d5e35a }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_fb4d99b8a31b428b8a97e5a2d45c31b9 }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_2e42521ed89a47b3af555b6692df1492 }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_513caa28423342109959d6d001e46d3c }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: americanexpress.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_a29ff3a03032417e8680462770d5e35a }}/forest-clove:${{ github.sha }}
+        tags: americanexpress.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_2e42521ed89a47b3af555b6692df1492 }}/forest-clove:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'Forest-Clove-Predictor'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_6d95b4eddc7540038dafb0f2a94a633a }}
-        images: 'americanexpress.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_a29ff3a03032417e8680462770d5e35a }}/forest-clove:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_94b607c4db9a4e92a46cfbff437e1eb7 }}
+        images: 'americanexpress.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_2e42521ed89a47b3af555b6692df1492 }}/forest-clove:${{ github.sha }}'

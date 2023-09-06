@@ -8,9 +8,11 @@
     <link rel="shortcut icon" href="/static/assests/logo_2.svg" type="image/x-icon">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="/static/css/main.css" />
+<!--    <link rel="stylesheet" href="Blueprints/Forestclover/static/css/forest.css" />-->
+    <link rel="stylesheet" href="static/css/main.css" />
+
     <noscript>
-        <link rel="stylesheet" href="/static/css/noscript.css" />
+        <link rel="stylesheet" href="static/css/noscript.css" />
     </noscript>
 </head>
 
@@ -53,7 +55,7 @@
                             <input class="file-upload" type="file" name="file" accept=".xlsx, .csv" required />
                             <!-- <button class="predict_button" type="submit">Predict My Forest</button> -->
                             <input class="predict_button" type="submit" value="Predict My Forest" />
-                            <button class="predict_button download"><a href="static\download_data\tamplate.xlsx"
+                            <button class="predict_button download"><a href="static/modelpara/demo.xlsx"
                                     download="">Download Template</a></button>
                         </div>
 
@@ -63,7 +65,8 @@
                 </header>
                 <a href="#file" class="jumplink pic">
                     <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
-                    <img src="/static/assests/img/tree.png" alt="" />
+<!--                    <img src="/static/assests/img/tree.png" alt="" />-->
+                    <img src="static/assests/img/tree.png" alt="" srcset="" />
                 </a>
             </article>
 
@@ -79,13 +82,13 @@
                         <input class="predict_input tooltip-arrow custom-tooltip" type="text" id="text_input"
                             name="text_input" placeholder="Enter Data to Predict Forest Type" data-bs-toggle="tooltip"
                             data-bs-placement="left"
-                            data-bs-template='<div class="tooltip custom-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>''
+                            data-bs-template='<div class="tooltip custom-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
                             title="
-                            Enter values in the form of key value pair.                      
-                            
-                            Example: 
+                            Enter values in the form of key value pair.
 
-                                    {   
+                            Example:
+
+                                    {
                                     ' Elevation': 2879.0, 'Aspect' : 93.0, 'Slope' :9.0,
                                     'Horizontal_Distance_To_Hydrology' : 433.0,
                                     'Vertical_Distance_To_Hydrology' : 66.0,
@@ -116,7 +119,7 @@
                                     'Soil_Type_35' : 0.0, 'Soil_Type_36' : 0.0,
                                     'Soil_Type_37' : 0.0, 'Soil_Type_38' : 0.0,
                                     'Soil_Type_39' : 0.0, 'label' : 2.0 } ">
-                                
+
                         <div class=" my-button"><button class="predict_button" type="submit">Predict My Forest</button>
 
         </div>
@@ -125,7 +128,7 @@
         </header>
         <a href="#work" class="jumplink pic">
             <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
-            <img src="/static/assests/img/tree.png" alt="" />
+            <img src="static/assests/img/tree.png" alt="" srcset="" />
         </a>
             </article>
 
@@ -144,7 +147,7 @@
                                 <label for="{{ i[0] }}">{{i[0]}}</label>
                                 <input class="num-input tooltip-arrow custom-tooltip" type="text" id="{{i[0]}}" name="{{i[0]}}" data-bs-toggle="tooltip"
                                 data-bs-placement="left"
-                                data-bs-template='<div class="tooltip custom-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>''
+                                data-bs-template='<div class="tooltip custom-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
                                 title="Enter any value for {{i[0]}} between : ( Min: {{i[1][0]}} , Max: {{i[1][1]}} )" required>
                                 <br>
                             </div>
